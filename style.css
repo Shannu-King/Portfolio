@@ -1010,3 +1010,142 @@ a:hover {
         font-size: 1.1rem;
     }
 }
+.nav-logo-img {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+/*==================== CERTIFICATIONS ====================*/
+.certifications {
+  padding: 100px 0;
+  background-color: #0f172a;
+}
+
+.certifications-scroll-container {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 20px 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #60a5fa #334155;
+}
+
+.certifications-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.certifications-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #60a5fa;
+  border-radius: 10px;
+}
+
+.certifications-scroll-container::-webkit-scrollbar-track {
+  background-color: #334155;
+  border-radius: 10px;
+}
+
+.certification-card {
+  flex-shrink: 0;
+  width: 350px;
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid #334155;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.certification-card h3 {
+  font-size: 1.25rem;
+  color: #e5e7eb;
+  margin-bottom: 5px;
+}
+
+.certification-card h4 {
+  color: #a78bfa;
+  margin-bottom: 10px;
+}
+
+.certification-date {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  .certification-card {
+    width: 280px;
+  }
+}
+/* Animation for cards to fade in and slide up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animated-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Animation for cards to fade in and slide up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animated-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.nav-link:focus,
+.nav-link:active {
+    outline: none;
+    box-shadow: none;
+}
+/* Update your .nav-container for better mobile alignment */
+@media (max-width: 768px) {
+    .nav-container {
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .nav-logo-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    .nav-logo {
+        margin-right: 10px;
+    }
+}
